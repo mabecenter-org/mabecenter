@@ -10,6 +10,10 @@
   "day_of_birth",
   "ssn",
   "gender",
+  "relationship",
+  "document",
+  "smoke",
+  "pregnant",
   "apply"
  ],
  "fields": [
@@ -19,7 +23,8 @@
    "in_list_view": 1,
    "label": "Contact",
    "options": "Contact",
-   "reqd": 1
+   "reqd": 1,
+   "width": "2"
   },
   {
    "fetch_from": "contact.custom_day_of_birth",
@@ -27,36 +32,69 @@
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Day of Birth",
-   "read_only": 1
+   "read_only": 1,
+   "width": "2"
   },
   {
+   "columns": 2,
    "fetch_from": "contact.custom_ssn",
    "fieldname": "ssn",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "SSN",
-   "read_only": 1
+   "read_only": 1,
+   "width": "1"
   },
   {
    "fetch_from": "contact.gender",
    "fieldname": "gender",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Gender",
-   "read_only": 1
+   "read_only": 1,
+   "width": "1"
   },
   {
    "default": "0",
    "fieldname": "apply",
    "fieldtype": "Check",
    "in_list_view": 1,
-   "label": "Apply"
+   "label": "Apply",
+   "width": "1"
+  },
+  {
+   "fieldname": "relationship",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Relationship",
+   "options": "\nOwner\nSpouse\nChild\nSibling\nParent\nPibling\nGrandparent\nGrandchild\nNibling\nCousin",
+   "width": "2"
+  },
+  {
+   "fetch_from": "contact.custom_document",
+   "fieldname": "document",
+   "fieldtype": "Data",
+   "label": "Document",
+   "read_only": 1,
+   "width": "1"
+  },
+  {
+   "default": "0",
+   "fieldname": "smoke",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Smoke"
+  },
+  {
+   "default": "0",
+   "fieldname": "pregnant",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Pregnant"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-10-09 05:01:01.370215",
+ "modified": "2024-10-09 10:59:52.255104",
  "modified_by": "Administrator",
  "module": "Mabecenter",
  "name": "Dependent Item",
