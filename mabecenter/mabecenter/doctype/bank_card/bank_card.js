@@ -30,7 +30,7 @@ frappe.ui.form.on('Bank Card', {
         } else if (card_number[0] == '6') {
             card_type = 'Discovery';
         } else {
-            frappe.msgprint(__('Número de tarjeta no válido. Debe empezar con 3 (American Express), 4 (Visa), 5 (Mastercard), o 6 (Discovery).'));
+            frappe.msgprint(__('Number Card Invalid. Must start with 3 (American Express), 4 (Visa), 5 (Mastercard), or 6 (Discovery).'));
             frm.set_value('card_type', '');
             return;
         }
