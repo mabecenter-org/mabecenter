@@ -6,39 +6,33 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "card_name",
-  "column_break_xwfm",
-  "card_type",
   "section_break_bmnq",
   "card_number",
   "column_break_iqtz",
   "card_subtype",
   "section_break_cdaz",
+  "card_type",
+  "column_break_jihc",
   "expiration",
   "column_break_wukc",
   "cvc",
   "party_details_section",
-  "party"
+  "party_type",
+  "customer",
+  "column_break_kxas",
+  "party",
+  "address_and_contact_section",
+  "address_html",
+  "column_break_hfpp",
+  "contact_html"
  ],
  "fields": [
-  {
-   "fieldname": "card_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Card Name",
-   "reqd": 1,
-   "unique": 1
-  },
   {
    "fieldname": "card_number",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Card Number",
    "reqd": 1
-  },
-  {
-   "fieldname": "column_break_xwfm",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "card_type",
@@ -83,14 +77,56 @@
   },
   {
    "fieldname": "party_details_section",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Party Details"
   },
   {
-   "fieldname": "party",
+   "fieldname": "column_break_jihc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_html",
+   "fieldtype": "HTML",
+   "label": "Contact HTML"
+  },
+  {
+   "fieldname": "address_html",
+   "fieldtype": "HTML",
+   "label": "Address HTML"
+  },
+  {
+   "default": "Customer",
+   "fieldname": "party_type",
    "fieldtype": "Link",
+   "label": "Party Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "column_break_kxas",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "{{ doc.customer }}",
+   "fieldname": "party",
+   "fieldtype": "Dynamic Link",
+   "label": "Party",
+   "options": "party_type"
+  },
+  {
+   "fieldname": "address_and_contact_section",
+   "fieldtype": "Section Break",
+   "label": "Address and Contact"
+  },
+  {
+   "fieldname": "column_break_hfpp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "hidden": 1,
    "label": "Customer",
-   "options": "Customer",
-   "reqd": 1
+   "options": "Customer"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -101,10 +137,10 @@
    "link_fieldname": "custom_default_card"
   }
  ],
- "modified": "2024-10-11 06:53:40.177272",
+ "modified": "2024-10-11 10:28:59.371768",
  "modified_by": "Administrator",
  "module": "Mabecenter",
- "name": "Card",
+ "name": "Bank Card",
  "owner": "Administrator",
  "permissions": [
   {

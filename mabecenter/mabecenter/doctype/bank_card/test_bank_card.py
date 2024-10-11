@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestCard(FrappeTestCase):
+class TestBankCard(FrappeTestCase):
 	pass
