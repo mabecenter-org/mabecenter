@@ -84,6 +84,8 @@ app_license = "mit"
 
 # before_install = "mabecenter.install.before_install"
 # after_install = "mabecenter.install.after_install"
+after_migrate = "mabecenter.install.after_migrate"
+
 
 # Uninstallation
 # ------------
