@@ -29,16 +29,15 @@ from frappe.utils import comma_and, get_link_to_form
 
 
 class BankCard(Document):
+	def onload(self):
+		load_address_and_contact(self)
+  
 	def autoname(self):
 		# Tomamos el nombre y los últimos 4 dígitos del número de tarjeta
 		formatted_number = '-'.join([self.card_number[i:i+4] for i in range(0, len(self.card_number), 4)])
 
 		# Generamos el nuevo nombre del Doctype con el formato deseado
 		self.name = formatted_number
-
-	def onload(self):
-		"""Load address and contacts in `__onload`"""
-		load_address_and_contact(self)
 
 	def on_trash(self):
 		delete_contact_and_address("BankCard", self.name)

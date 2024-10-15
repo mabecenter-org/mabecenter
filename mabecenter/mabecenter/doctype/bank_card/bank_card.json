@@ -17,10 +17,8 @@
   "column_break_wukc",
   "cvc",
   "party_details_section",
-  "party_type",
   "customer",
   "column_break_kxas",
-  "party",
   "address_and_contact_section",
   "address_html",
   "column_break_hfpp",
@@ -95,22 +93,8 @@
    "label": "Address HTML"
   },
   {
-   "default": "Customer",
-   "fieldname": "party_type",
-   "fieldtype": "Link",
-   "label": "Party Type",
-   "options": "DocType"
-  },
-  {
    "fieldname": "column_break_kxas",
    "fieldtype": "Column Break"
-  },
-  {
-   "default": "{{ doc.customer }}",
-   "fieldname": "party",
-   "fieldtype": "Dynamic Link",
-   "label": "Party",
-   "options": "party_type"
   },
   {
    "fieldname": "address_and_contact_section",
@@ -124,7 +108,6 @@
   {
    "fieldname": "customer",
    "fieldtype": "Link",
-   "hidden": 1,
    "label": "Customer",
    "options": "Customer"
   }
@@ -137,7 +120,7 @@
    "link_fieldname": "custom_default_card"
   }
  ],
- "modified": "2024-10-11 10:28:59.371768",
+ "modified": "2024-10-15 04:10:41.524332",
  "modified_by": "Administrator",
  "module": "Mabecenter",
  "name": "Bank Card",

@@ -37,19 +37,19 @@ frappe.ui.form.on('Bank Card', {
 
         // Actualizar el campo 'card_type' con el valor determinado
         frm.set_value('card_type', card_type);
-    },
+    },/* ,
     onload: function(frm) {
         // Si el Card se está creando desde un Customer, establecer automáticamente el campo party
         console.log(frm.doc.customer)
         frm.set_value('party', frm.doc.customer);
-    },
-    setup: function (frm) {
+    }, */
+    /* setup: function (frm) {
 		frm.set_query("party_type", function () {
 			return {
 				query: "erpnext.setup.doctype.party_type.party_type.get_party_type",
 			};
 		});
-	},
+	}, */
     refresh: function(frm) {
         frappe.dynamic_link = { doc: frm.doc, fieldname: 'name', doctype: 'Bank Card' };
 
